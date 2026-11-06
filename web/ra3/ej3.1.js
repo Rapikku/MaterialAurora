@@ -1,22 +1,21 @@
-const arrinfo=document.getElementsByClassName("info-item").innerHTML;
-console.log(arrinfo)
+// array de contenido selector de spans
+let spans = document.querySelectorAll(".info-item span")
+
 //título del documento
-const titulo = document.title;
-console.log(titulo);
+spans[0].textContent = document.title;
 
 //URL actual
-const urlActual = document.innerHTML= document.URL;
-console.log(urlActual);
+spans[1].textContent = document.URL;
 
 //el idioma del documento y del navegador
-
-
-const idiomaNavegador= document.documentElement.lang;
-console.log(idiomaNavegador)
-
-
-//ancho y alto de la pantalla
+spans[2].textContent = navigator.language;
 
 //ancho y alto de la ventana del navegador
+spans[3].textContent = `${window.innerHeight} x ${window.innerWidth}`;
+
+//ancho y alto de la pantalla
+spans[4].textContent = `${screen.height} x ${screen.width}`;
 
 //el UserAgent del navegador
+spans[5].textContent = navigator.userAgent;
+
